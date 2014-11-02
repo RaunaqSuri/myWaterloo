@@ -111,7 +111,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.mIcon {
+    width: 35px;
+    height: 35px;
+    margin: 0 25px 0 25px;
+}
 
+#mediaIcons {
+    width: 100%;
+    margin: 0 auto;
+}
 
 
 
