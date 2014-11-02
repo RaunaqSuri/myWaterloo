@@ -1,0 +1,24 @@
+.search-button{
+	background-color: transparent;
+	background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
+
+#searchBox{
+	width: 400px;
+	margin: 0 auto;
+}
+
+#searchField{
+	padding:5px;
+}
+
+#search{
+	border-radius: 5px;
+	padding:7px;
+	width:85%;
+}
