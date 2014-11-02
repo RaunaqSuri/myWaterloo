@@ -51,5 +51,15 @@ $(function() {
     });
   };
 
+  $('#foodbar').on('mouseenter', function(){
+    $(this).siblings('#food').css('left', '0');
+    $(this).siblings('#food').css('opacity', '1');
+  });
+
+  $('#food').on('mouseleave', function(){
+    $(this).css('left', '-565px');
+    $(this).css('opacity', '0');
+  });
+
   updateList(url);
 });
