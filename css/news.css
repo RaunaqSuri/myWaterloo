@@ -38,7 +38,7 @@ i {
 
 #news {
   overflow-y: scroll;
-  height: 270px;
+  height: 250px;
   position: relative;
   top: 140px;
   right: -400px;
