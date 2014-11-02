@@ -1,7 +1,9 @@
-.center{
-	margin: 15px auto;
+.bottom-right{
+	position:absolute;
+	bottom:0;
+	right:0;
 }
 
 #social{
-	width:500px;
+	width:398px;
 }
