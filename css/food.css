@@ -20,18 +20,17 @@
 #food {
   position: relative;
   top: 140px;
-  bottom: 0;
   left: -565px;
   width: 150px;
   height: 210px;
   opacity: 0;
+  color:white;
   -webkit-transition: width, opacity, 0.3s ease-in-out;
   transition: width, opacity, 0.3s ease-in-out;
 }
 
 #food ul {
   margin: 0;
-  padding: 5px;
   list-style: none;
 }
 
@@ -43,7 +42,6 @@
   position: relative;
   height: auto;
   padding: 10px;
-  border: 2px solid rgba(255,255,255,0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -56,21 +54,30 @@
   white-space: nowrap;
 }
 
+#locations li, ul li:not(:last-child) {
+  margin-bottom: 2px;
+}
+
 #locations > li:hover > ul {
-  top: -1px;
+  top: 0px;
   left: 100%;
   min-width: 100%;
 }
 
 #locations > li li:hover > ul {
   left: 100%;
-  top: -1px;
+  top: 0px;
   text-align: left;
 }
 
 #locations p {
   margin-top: 5px;
   text-decoration:underline;
+}
+
+#locations li:hover {
+  background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
 }
 
 #foodbar {
