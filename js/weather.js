@@ -1,24 +1,22 @@
 $(function(){
-	var daysOfWeek = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
-	var WATERLOO_CITY_ID = "6176823";
-	var ZERO_DEGREES_IN_KELVIN = 273.15;
-	var apiKey = "59bb6038bacbe0e8823e4503bded4bb6";
-	var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?id="+WATERLOO_CITY_ID;
+	var daysOfWeek = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+		WATERLOO_CITY_ID = "6176823",
+		ZERO_DEGREES_IN_KELVIN = 273.15,
+		apiKey = "59bb6038bacbe0e8823e4503bded4bb6",
+		weatherUrl = "http://api.openweathermap.org/data/2.5/weather?id="+WATERLOO_CITY_ID;
 
 	//Gets the weather
 	$.getJSON(weatherUrl, function(data){
 		//Weather data
-		var desc = data.weather[0].main;
-		var iconSrc = "http://openweathermap.org/img/w/"+data.weather[0].icon;
-		var temp = Math.round(data.main.temp - ZERO_DEGREES_IN_KELVIN);
+		var desc = data.weather[0].main,
+			iconSrc = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
+			temp = Math.round(data.main.temp - ZERO_DEGREES_IN_KELVIN);
 		//checks to see if weather is zero. Odd case
 		if(temp == '-0'){
 			temp = 0;
 		}
 
-		console.log(desc);
-		console.log(temp);
-
+		$('#temp').text(desc + ' - ' + temp + '\u00B0C');
 	});
 
 	//Gets the forecast for the next 3 days
@@ -32,12 +30,27 @@ $(function(){
 				temp = 0;
 			}
 
-			var iconSrc = "http://openweathermap.org/img/w/"+data.list[i].weather[0].icon;
-			var desc = data.list[i].weather[0].main;
+			var targetText,
+				targetIco,
+				iconSrc = "http://openweathermap.org/img/w/"+ data.list[i].weather[0].icon + ".png",
+				desc = data.list[i].weather[0].main,
+				day = daysOfWeek[moment.unix(data.list[i].dt).weekday()];
 
-			var day = daysOfWeek[moment.unix(data.list[i].dt).weekday()];
-			console.log("FORECAST "+day+" "+temp);
-			console.log("FORECAST "+day+" "+desc);
+			if( i == 0 ) {
+				targetText = $('#one p');
+				targetIco = $('#one img');
+			}
+			else if( i == 1 ) {
+				targetText = $('#two p');
+				targetIco = $('#two img');
+			}
+			else if( i == 2 ) {
+				targetText = $('#three p');
+				targetIco = $('#three img');
+			}
+
+			targetIco.attr('src', iconSrc);
+			targetText.text(day + '-' + temp + '\u00B0C');
 		}
 
 

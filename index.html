@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/food.css">
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/tweets.css">
+    <link rel="stylesheet" href="css/weather.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
@@ -23,7 +24,23 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div id="clock"></div>
-    <div id="weather"></div>
+    <div id="weather">
+    	<div id="todaysWeather">
+    		<p id="temp"></p>
+    		<img src="./img/sun.png"/>
+    	</div>
+    	<div id="detailedWeather">
+    		<div id="one">
+    			<p></p><img/>
+    		</div>
+    		<div id="two">
+    			<p></p><img/>
+    		</div>
+    		<div id="three">
+    			<p></p><img/>
+    		</div>
+    	</div>
+    </div>
     <!--Prioritize todo last-->
     <div id="todo"></div>
     <div id="foodbox">
@@ -35,17 +52,19 @@
       </div>
     </div>
    	<div id="newsbox">
-  		<div id="newsbar">
-  			<p><i class="fa fa-newspaper-o"></i>News</p>
-  		</div>
-  		<div id="news">
-  			<ul id="newsList">
-  			</ul>
-  		</div>
-    </div>
+		<div id="newsbar">
+			<p><i class="fa fa-newspaper-o"></i>News</p>
+		</div>
+		<div id="news">
+			<ul id="newsList">
+			</ul>
+		</div>
+   </div>
     <div id="social" class="bottom-right">
-        <a class="twitter-timeline" style="padding:0;" height="250" href="https://twitter.com/MWEngHacks/lists/waterloo" data-widget-id="528826441031368704" data-chrome="noheader nofooter noscrollbar">Tweets from https://twitter.com/MWEngHacks/lists/waterloo</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <a class="twitter-timeline" href="https://twitter.com/MWEngHacks/lists/waterloo" height="250px"
+            data-widget-id="528826441031368704" data-chrome="nofooter noheader noscrollbar"></a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
     </div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
