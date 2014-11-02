@@ -1,10 +1,10 @@
 {
   "manifest_version" : 2,
-  "name": "My extension",
+  "name": "myWaterloo",
   "version": "1.0",
-
+  "author": "Denny Hoang (dennyhoang5@gmail.com), Raunaq Suri (raunaq.suri@hotmail.com), Hamza Azeem (hamzaazeem1@gmail.com)",
 
   "chrome_url_overrides" : {
-    "newtab" : "index.html"
+    "newtab" : "redirect.html"
   }
 }

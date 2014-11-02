@@ -16,7 +16,7 @@ $(function(){
 			temp = 0;
 		}
 
-		$('#temp').text(desc + ' - ' + temp + '\u00B0C');
+		$('#temp').text(desc + '  ' + temp + '\u00B0C');
 	});
 
 	//Gets the forecast for the next 3 days
@@ -50,7 +50,7 @@ $(function(){
 			}
 
 			targetIco.attr('src', iconSrc);
-			targetText.text(day + '-' + temp + '\u00B0C');
+			targetText.text(day + '  ' + temp + '\u00B0C');
 		}
 
 
