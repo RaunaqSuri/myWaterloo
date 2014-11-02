@@ -1,1 +1,4 @@
+$(function(){
 
+	$('#search').focus();
+});
