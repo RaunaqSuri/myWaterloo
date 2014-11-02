@@ -45,7 +45,7 @@ i {
   opacity: 0;
   -webkit-transition: width, opacity, 0.3s ease-in-out;
   transition: width, opacity, 0.3s ease-in-out;
-  width: 500px;
+  width: 400px;
 }
 
 #news ul {
@@ -67,7 +67,7 @@ i {
 }
 
 #news ul li:hover {
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.8);
   cursor: pointer;
 }
 
