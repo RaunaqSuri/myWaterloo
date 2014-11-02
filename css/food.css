@@ -1,19 +1,36 @@
-#food {
+#foodbox {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Arial', 'sans-serif';
   position: absolute;
-  top: 0;
-  bottom: 0;
+  left:0;
+  top:0;
+}
+
+#foodbar p {
+  text-align: right;
+  color: white;
+  font-size: 25px;
+  margin: 15px 10px;
+}
+
+#foodbar i {
+  margin-right: 15px;
+  padding-left: 25px;
+}
+
+#food {
+  position: relative;
+  top: 140px;
+  left: -565px;
   width: 150px;
   height: 210px;
-  text-align: center;
-  color: white;
-  margin: auto;
-  visibility: hidden;
+  opacity: 0;
+  color:white;
+  -webkit-transition: width, opacity, 0.3s ease-in-out;
+  transition: width, opacity, 0.3s ease-in-out;
 }
 
 #food ul {
   margin: 0;
-  padding: 5px;
-  height: 50px;
   list-style: none;
 }
 
@@ -25,7 +42,6 @@
   position: relative;
   height: auto;
   padding: 10px;
-  border: 2px solid rgba(255,255,255,0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -38,15 +54,19 @@
   white-space: nowrap;
 }
 
+#locations li, ul li:not(:last-child) {
+  margin-bottom: 2px;
+}
+
 #locations > li:hover > ul {
-  top: -1px;
+  top: 0px;
   left: 100%;
   min-width: 100%;
 }
 
 #locations > li li:hover > ul {
   left: 100%;
-  top: -1px;
+  top: 0px;
   text-align: left;
 }
 
@@ -55,17 +75,22 @@
   text-decoration:underline;
 }
 
-#foodbar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 5px;
-  height: 70%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.3);
+#locations li:hover {
+  background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
 }
 
-#foodbar:hover #food {
-  visibility: visible;
+#foodbar {
+  display: inline-block;
+  position: absolute;
+  top: 75px;
+  left: -90px;
+  width: 150px;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#foodbar:hover {
+  left: 0px;
 }
