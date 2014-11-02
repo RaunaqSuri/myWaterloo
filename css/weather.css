@@ -1,0 +1,94 @@
+#weather {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 100px;
+  left: 0;
+  width: 500px;
+  background-color: #87CEEB;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: -3px 4px 3px rgba(0,0,0,0.8);
+}
+
+#todaysWeather {
+  position: relative;
+  margin: 5px auto 2px auto;
+  height: 55%;
+  border-bottom: 2px solid white;
+  width: 95%;
+}
+
+#todaysWeather p {
+  color: white;
+  position: absolute;
+  line-height: 95%;
+  font-size: 35px;
+  right: 10%;
+}
+
+#todaysWeather img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 17%;
+}
+
+#detailedWeather {
+  position: relative;
+  margin: 10px auto;
+  height: 40px;
+  width: 90%;
+  color: white;
+}
+
+#detailedWeather #one {
+  position: absolute;
+  left:0;
+  height: 100%;
+  width: 33%;
+  padding-right: 7px;
+}
+
+#detailedWeather #two {
+  position: absolute;
+  margin-left: 33%;
+  height: 100%;
+  width: 33%;
+  padding-right:5px;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+#detailedWeather #three {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 33%;
+}
+
+#detailedWeather #one p {
+  text-align: right;
+  margin-right: 8px;
+}
+
+#detailedWeather #two p {
+  text-align: right;
+}
+
+#detailedWeather #three p {
+  text-align: right;
+}
+
+#detailedWeather img {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+
+#detailedWeather #three img {
+  position: absolute;
+  top: 0;
+  left: 13px;
+}
