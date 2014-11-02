@@ -2,7 +2,7 @@ $(function() {
   var apikey = "85a5878b10587b2836bf5e7a232506d9";
   var url= "https://api.uwaterloo.ca/v2/foodservices/menu.xml?key="+apikey;
 
-  build = function(elArray) {
+  buildFood = function(elArray) {
     var locations = document.getElementById("locations");
     for(var i=0; i<elArray.length; i++){
       locations.appendChild(elArray[i]);
@@ -47,7 +47,7 @@ $(function() {
         locationLi.appendChild(dayUl);
         elems.push(locationLi);
       });
-      build(elems);
+      buildFood(elems);
     });
   };
 
