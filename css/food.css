@@ -1,43 +1,39 @@
 body {
-  background-color: white;
+  background-color: grey;
 }
 
 #food {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 150px;
-  height: 100%;
-  background: rgba(255, 255, 255, .5);
+  height: 210px;
   text-align: center;
+  margin: auto;
+  visibility: hidden;
 }
 
 #food ul {
   margin: 0;
-  padding: 0;
+  padding: 5px;
+  height: 50px;
   list-style: none;
 }
 
-#locations a {
-  display: block;
-  position: relative;
-  background: rgba(255, 255, 255, .9);
-  padding: .8em 1.8em;
-  color: #242424;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 #locations {
-  height: 25px;
   text-decoration: none;
 }
 
 #locations li {
   position: relative;
+  height: auto;
+  padding: 5px;
+  border: 2px solid rgba(255,255,255,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #locations > li {
-  border-bottom: 4px #aaa solid;
+  /*border-bottom: 4px #aaa solid;*/
 }
 
 /* Submenus
@@ -47,7 +43,6 @@ body {
   position: absolute;
   left: -99999em;
   white-space: nowrap;
-  z-index: 1;
 }
 
 #locations > li:hover > ul {
@@ -58,7 +53,6 @@ body {
 
 #locations > li li:hover > ul {
   left: 100%;
-  margin-left: 1px;
   top: -1px;
   text-align: left;
 }
@@ -66,4 +60,19 @@ body {
 #locations p {
   margin-top: 5px;
   text-decoration:underline;
+}
+
+#foodbar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  height: 70%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#foodbar:hover #food {
+  visibility: visible;
 }
