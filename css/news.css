@@ -1,3 +1,36 @@
-#news {
+#newsList {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin:auto;
   visibility: hidden;
+  width: 500px;
+  right: 0;
+}
+
+#newsbar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 70%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#newsbar:hover #newsList {
+  visibility: visible;
+}
+
+#newsList li {
+  padding: 10px;
+  border: 2px solid rgba(255,255,255,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  list-style: none;
+}
+
+#newsList a {
+  text-decoration: none;
+  color: white;
 }
