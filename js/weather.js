@@ -50,7 +50,7 @@ $(function(){
 			}
 
 			targetIco.attr('src', iconSrc);
-			targetText.text(day + '-' + temp + '\u00B0C');
+			targetText.text(day + '  ' + temp + '\u00B0C');
 		}
 
 
