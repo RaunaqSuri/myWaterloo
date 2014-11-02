@@ -12,6 +12,7 @@
         <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/food.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -24,7 +25,41 @@
         <div id="weather"></div>
         <!--Prioritize todo last-->
         <div id="todo"></div>
-        <div id="food"></div>
+        <div id="food">
+          <ul id="locations">
+            <!-- <li>Location1 -->
+              <!-- <ul>
+                <li>Monday
+                  <ul>
+                    <li class="monday">Item 1</li>
+                  </ul>
+                </li>
+                <li>Tuesday
+                  <ul>
+                    <li class="tuesday">Item 2</li>
+                  </ul>
+                </li>
+                <li>Wednesday
+                  <ul>
+                    <li class="wednesday">Item 3</li>
+                  </ul>
+                </li>
+                <li>Thursday
+                  <ul>
+                    <li class="thursday">Item 4</li>
+                  </ul>
+                </li>
+                <li>Friday
+                  <ul>
+                    <li class="friday">Item 5</li>
+                  </ul>
+                </li>
+              </ul> -->
+            <!-- </li>
+
+            <li>Location2</li> -->
+          <ul>
+        </div>
         <div id="news"></div>
         <div id="schedule"></div>
         <div id="social">
@@ -32,17 +67,18 @@
             <div id="omguw"></div>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/food.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src='http://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
