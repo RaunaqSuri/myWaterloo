@@ -31,5 +31,15 @@ $(function(){
 		});
 	};
 
+	$('#newsbar').on('mouseenter', function(){
+		$(this).siblings('#news').css('right', '0');
+		$(this).siblings('#news').css('opacity', '1');
+	});
+
+	$('#news').on('mouseleave', function(){
+		$(this).css('right', '-565px');
+		$(this).css('opacity', '0');
+	});
+
 	updateList(url);
 });

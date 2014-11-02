@@ -1,36 +1,94 @@
-#newsList {
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#newsbox {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Arial', 'sans-serif';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  margin:auto;
-  visibility: hidden;
-  width: 500px;
-  right: 0;
+  right:0;
+  top:0;
 }
 
 #newsbar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 5px;
-  height: 70%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  position:absolute;
+  top: 75px;
+  right: -90px;
+  width: 150px;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-#newsbar:hover #newsList {
-  visibility: visible;
+#newsbar:hover {
+  right: 0px;
 }
 
-#newsList li {
-  padding: 10px;
-  border: 2px solid rgba(255,255,255,0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-  list-style: none;
-}
-
-#newsList a {
-  text-decoration: none;
+#newsbar p {
+  text-align:left;
   color: white;
+  font-size: 25px;
+  margin: 15px 0;
+}
+
+i {
+  margin: 0 15px;
+}
+
+#news {
+  overflow-y: scroll;
+  height: 500px;
+  position: relative;
+  top: 140px;
+  right: -565px;
+  opacity: 0;
+  -webkit-transition: width, opacity, 0.3s ease-in-out;
+  transition: width, opacity, 0.3s ease-in-out;
+  width: 500px;
+}
+
+#news ul {
+  margin: 0;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+#news ul li {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  list-style-type: none;
+  padding: 15px;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+#news ul li:hover {
+  background-color: rgba(0,0,0,1);
+  cursor: pointer;
+}
+
+#news ul li:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+#news::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: rgba(100,100,100,0.2);
+}
+
+#news::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: rgba(100,100,100,0.2);
+}
+
+#news::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border: 2px solid #555555;
 }
