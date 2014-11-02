@@ -1,0 +1,17 @@
+#clock {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#time{
+	font-size: 128px;
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+#date {
+	font-size: 54px;
+	color: white;
+	text-shadow: 2px 2px black;
+	margin: 0 0 15px 15px;
+}
