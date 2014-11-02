@@ -16,7 +16,7 @@ $(function(){
 			temp = 0;
 		}
 
-		$('#temp').text(desc + ' - ' + temp + '\u00B0C');
+		$('#temp').text(desc + '  ' + temp + '\u00B0C');
 	});
 
 	//Gets the forecast for the next 3 days
