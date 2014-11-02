@@ -38,10 +38,10 @@ i {
 
 #news {
   overflow-y: scroll;
-  height: 500px;
+  height: 270px;
   position: relative;
   top: 140px;
-  right: -565px;
+  right: -400px;
   opacity: 0;
   -webkit-transition: width, opacity, 0.3s ease-in-out;
   transition: width, opacity, 0.3s ease-in-out;
@@ -55,15 +55,15 @@ i {
 }
 
 #news ul li {
+  border-radius: 4px;
   color: white;
   background-color: rgba(0,0,0,0.5);
   list-style-type: none;
   padding: 15px;
-  font-size: 15px;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 #news ul li:hover {
