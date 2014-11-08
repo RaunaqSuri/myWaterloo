@@ -15,6 +15,8 @@ This is a version of the popular chrome extension [Momentum](https://chrome.goog
 - possibly remove twitter feed and add todo list instead
 - fix bugs and improve styling
 - collect screenshots and develop a description for the chrome store
+- update weather UI
+- add async updates for clock
 
 ###Contributing
 If you would like to contribute to this project, just fork it and send us a pull request. One of us will look at it and approve it! We'll also add you to the list of contributors here in the readme
