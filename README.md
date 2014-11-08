@@ -1,6 +1,6 @@
 myWaterloo
 ============
-This is a version of the popular chrome extension [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en) for Waterloo Students. Download it [here!](https://chrome.google.com/webstore/detail/mywaterloo/pfkjgdkkbepmadamhajdjcjkiellcjmd)
+This is a version of the popular chrome extension [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=en) for Waterloo Students. Download it [here](https://chrome.google.com/webstore/detail/mywaterloo/pfkjgdkkbepmadamhajdjcjkiellcjmd)!
 
 ###Features
 - quick links to sites such as learn, quest, facebook and twitter
