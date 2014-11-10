@@ -14,7 +14,6 @@ This is a version of the popular chrome extension [Momentum](https://chrome.goog
 - fix the urls
 - possibly remove twitter feed and add todo list instead
 - update weather UI
-- add async updates for clock
 - fix bugs and improve styling
 - collect screenshots and develop a description for the chrome store
 - cycling wallpaper
