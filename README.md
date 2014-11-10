@@ -23,3 +23,6 @@ If you would like to contribute to this project, just fork it and send us a pull
 
 ###Authors
 Created by [Hamza Azeem](http://github.com/HamzaAzeem), [Denny Hoang](http://github.com/DennyHoang) and [Raunaq Suri](http://github.com/RaunaqSuri)
+
+###Contributors
+[Joshua Ching](http://github.com/JoshuaChing)
