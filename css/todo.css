@@ -1,19 +1,183 @@
-#todo {
-  width: 350px;
-  height: 300px;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 5px;
+ul#taskList {
+  padding: 0 25px;
 }
 
-#todo h3 {
+li.task {
+  list-style-type: none;
+  font-family: Arial;
+  font-size: 1.2em;
+  padding: 7px 0;
+  transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+
+}
+
+li.task:hover {
+  background-color: rgba(100,100,100,0.5);
+}
+
+li.task:hover .deleteTaskBtn {
+  visibility: visible;
+  opacity: 1;
+}
+
+li.task:not(:last-child) {
+  border-bottom: 1px solid white;
+}
+
+input.taskCheckbox {
+  position: relative;
+  float: left;
+  margin: 5px 10px 0 5px;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+}
+
+input.taskCheckbox:checked {
+  background-color: #009925;
+}
+
+input.taskCheckbox:checked:after {
+  color: white;
+  content: "\2713";
+  display: block;
+  font-size: 12px;
+  height: 12px;
+  position: absolute;
+  width: 12px;
+  left: 0.5px;
+  bottom: 2px;
+}
+
+input.taskCheckbox + label.taskLabel {
+  color: white;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+  font-style: italic;
+  color: grey;
+}
+
+#todo {
+  width: 30%;
+  height: 45%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+#header {
   text-align: center;
 }
 
-input {
-  width: 75%;
-  margin: 4px;
+#header h1 {
+  color: white;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#inputContainer {
+  padding: 0 15px;
+}
+
+#inputContainer #taskInput {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#listWrapper {
+  position: absolute;
+  bottom: 50px;
+  top: 145px;
+  right: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+#deleteBtnWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 15px;
+  padding: 0 15px;
+}
+
+#deleteBtnWrapper #deleteCompletedBtn {
+  float: left;
+  -webkit-appearance: none;
+  opacity: 0.5;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border-radius: 3px;
+  border: 1px solid white;
+  width: 150px;
+  height: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+}
+
+#deleteBtnWrapper #deleteCompletedBtn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#deleteBtnWrapper #clearTasksBtn {
+  float: right;
+  -webkit-appearance: none;
+  opacity: 0.5;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border-radius: 3px;
+  border: 1px solid white;
+  width: 150px;
+  height: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+}
+
+#deleteBtnWrapper #clearTasksBtn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.deleteTaskBtn {
+  float: right;
+  color: white;
+  background: rgba(0,0,0,0);
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px 5px;
+  visibility: hidden;
+  opacity: 0;
+  line-height: 0;
+  margin-right: 5px;
+  cursor: default;
+  transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+}
+
+.deleteTaskBtn:hover {
+  background-color: rgba(255,0,0,0.4);
 }
