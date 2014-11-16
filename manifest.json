@@ -5,6 +5,6 @@
   "author": "Denny Hoang (dennyhoang5@gmail.com), Raunaq Suri (raunaq.suri@hotmail.com), Hamza Azeem (hamzaazeem1@gmail.com)",
 
   "chrome_url_overrides" : {
-    "newtab" : "redirect.html"
+    "newtab" : "index.html"
   }
 }
