@@ -17,6 +17,9 @@ This is a version of the popular chrome extension [Momentum](https://chrome.goog
 - fix bugs and improve styling
 - collect screenshots and develop a description for the chrome store
 - cycling wallpaper
+- Due dates for tasks
+- Add flash animation to input on invalid entry
+- Create fancier delete confirmation box
 
 ###Contributing
 If you would like to contribute to this project, just fork it and send us a pull request. One of us will look at it and approve it! We'll also add you to the list of contributors here in the readme
