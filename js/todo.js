@@ -145,6 +145,8 @@ $(function(){
 		saveLocalList();
 		updateCompletedListArray();
 		updateListView();
+
+		$('#taskInput').val('');
 	}
 
 	function deleteAll() {
@@ -154,6 +156,8 @@ $(function(){
 			taskList = completedTasks = [];
 			saveLocalList();
 		}
+
+		$('#taskInput').val('');
 	}
 
 	function saveLocalList() {
