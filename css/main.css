@@ -111,29 +111,39 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.mIcon {
-    width: 35px;
-    height: 35px;
-    margin: 0 25px 0 25px;
-}
-
 #mediaIcons {
     width: 100%;
     margin: 0 auto;
 }
 
+#icon-list {
+    width:400px;
+    list-style: none;
+    margin: 0 auto;
+}
 
+#icon-list li {
+    margin-bottom: 0;
+    display: inline-block;
+    float: left;
+    opacity: 0.5;
+    transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+}
 
+#icon-list li:hover {
+    opacity: 1;
+}
 
+#icon-list li:not(:first-child) {
+    margin-left: 75px;
+}
 
-
-
-
-
-
-
-
-
+.mIcon {
+    width: 35px;
+    height: 35px;
+}
 
 
 /* ==========================================================================
