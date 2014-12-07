@@ -6,10 +6,20 @@
   bottom: 100px;
   left: 0;
   width: 450px;
-  background-color: #87CEEB;
   height: 150px;
   border-radius: 10px;
-  box-shadow: -3px 4px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 5px 4px rgba(0,0,0,0.6);
+  transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease-in-out;
+      -moz-transition: background-color 1s ease-in-out;
+}
+
+#weather.day {
+  background: linear-gradient(to bottom, rgba(0,126,244,1) 0%,rgba(112,173,224,1) 100%,rgba(135,188,234,1) 100%);
+}
+
+#weather.night {
+  background: linear-gradient(to bottom, rgba(0,11,51,1) 0%,rgba(25,62,91,1) 99%);
 }
 
 #todaysWeather {
@@ -30,9 +40,20 @@
 
 #todaysWeather img {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  left: 17%;
+  width: 55px;
+  height: 55px;
+  left: 20%;
+  top: 16%;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px;
+}
+
+#todaysWeather img.day {
+  background-color: rgb(95,158,160);
+}
+
+#todaysWeather img.night {
+  background-color: rgb(119,136,153);
 }
 
 #detailedWeather {

@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/food.css">
     <link rel="stylesheet" href="css/news.css">
-    <link rel="stylesheet" href="css/tweets.css">
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/clock.css">
     <link rel="stylesheet" href="css/todo.css">
@@ -32,6 +31,15 @@
             <input id="search" type="text" name="q" size="31" value="" placeholder="Search here">
             <button class="search-button fa fa-search"></button>
         </form>
+    </div>
+    <div id="mediaicons">
+        <ul id="icon-list">
+            <li><a href="http://facebook.com"><img class="mIcon" src="./img/fb.png" /></a></li>
+            <li><a href="http://twitter.com"><img class="mIcon" src="./img/tw.png" /></a></li>
+            <li><a href="http://quest.uwaterloo.ca"><img class="mIcon" src="./img/quest.png" /></a></li>
+            <li><a href="http://learn.uwaterloo.ca"><img class="mIcon" src="./img/learn.png"/></a></li>
+        </ul>       
+    </div>
     <div id="clock">
     	<div id="time"></div>
     	<div id="date"></div>
@@ -39,7 +47,7 @@
     <div id="weather">
     	<div id="todaysWeather">
     		<p id="temp"></p>
-    		<img src="./img/sun.png"/>
+    		<img/>
     	</div>
     	<div id="detailedWeather">
     		<div id="one">
@@ -53,15 +61,10 @@
     		</div>
     	</div>
     </div>
-    <div id="mediaicons">
-    	<a href="http://facebook.com" target="_blank"><img class="mIcon" src="./img/fb.png" /></a>
-    	<a href="http://twitter.com" target="_blank"><img class="mIcon" src="./img/tw.png" /></a>
-    	<a href="http://quest.uwaterloo.ca" target="_blank"><img class="mIcon" src="./img/quest.png" /></a>
-    	<a href="http://learn.uwaterloo.ca" target="_blank"><img class="mIcon" src="./img/learn.png"/></a>
-    </div>
     <div id="todo">
     	<div id="header">
             <h1>Todo List</h1>
+            <span id="minimizeBtn" class="fa fa-minus"></span>
         </div>
         <div id="inputContainer">
             <input id="taskInput" type="text" placeholder="Add a task" maxlength="50" />
@@ -93,11 +96,9 @@
 		</div>
    </div>
 	<script src="js/vendor/jquery-2.1.1.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 	<script src="js/vendor/moment.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
-    <script src="js/search.js"></script>
 	<script src="js/food.js"></script>
 	<script src="js/weather.js"></script>
 	<script src="js/clock.js"></script>
