@@ -5,12 +5,18 @@
     cursor:pointer;
     overflow: hidden;
     outline:none;
+    transition: all 0.2s ease-in-out;
+    	-webkit-transition: all 0.2s ease-in-out;
+    		-moz-transition: all 0.2s ease-in-out;
+}
 
+.search-button:hover{
+	text-shadow: 0 0 5px white
 }
 
 #searchBox{
 	width: 400px;
-	margin: 0 auto;
+	margin: 5px auto;
 }
 
 #searchField{

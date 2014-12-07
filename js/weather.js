@@ -3,20 +3,29 @@ $(function(){
 		WATERLOO_CITY_ID = "6176823",
 		ZERO_DEGREES_IN_KELVIN = 273.15,
 		apiKey = "59bb6038bacbe0e8823e4503bded4bb6",
+		currTime = new Date().getTime(),
 		weatherUrl = "http://api.openweathermap.org/data/2.5/weather?id="+WATERLOO_CITY_ID;
 
 	//Gets the weather
 	$.getJSON(weatherUrl, function(data){
 		//Weather data
+		var sunrise = data.sys.sunrise*1000; // In epoch
+		if( currTime > sunrise ) {
+			$('#weather').removeClass('night').addClass('day');
+			$('#todaysWeather img').removeClass('night').addClass('day');
+		} else {
+			$('#weather').removeClass('day').addClass('night');
+			$('#todaysWeather img').removeClass('day').addClass('night');
+		}
+		
 		var desc = data.weather[0].main,
 			iconSrc = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
 			temp = Math.round(data.main.temp - ZERO_DEGREES_IN_KELVIN);
 		//checks to see if weather is zero. Odd case
-		if(temp == '-0'){
-			temp = 0;
-		}
+		temp = temp == '-0' ? 0 : temp;
 
 		$('#temp').text(desc + '  ' + temp + '\u00B0C');
+		$('#todaysWeather img').attr('src', iconSrc);
 	});
 
 	//Gets the forecast for the next 3 days
@@ -26,9 +35,7 @@ $(function(){
 		for(var i = 0; i < 3; i++){
 
 			var temp = Math.round(data.list[i].temp.day - ZERO_DEGREES_IN_KELVIN);
-			if(temp == '-0'){
-				temp = 0;
-			}
+			temp = temp == '-0' ? 0 : temp;
 
 			var targetText,
 				targetIco,
@@ -52,8 +59,6 @@ $(function(){
 			targetIco.attr('src', iconSrc);
 			targetText.text(day + '  ' + temp + '\u00B0C');
 		}
-
-
-	})
+	});
 
 });
